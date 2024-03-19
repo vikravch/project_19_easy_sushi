@@ -1,25 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from "react-router-dom";
+import ActivityPage from "./modules/activity_page/presentation/ActivityPage";
+import NavigationBar from "./modules/nav_cart/presentation/NavigationBar";
+import CartBar from "./modules/nav_cart/presentation/CartBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className={'App'}>
+          <div className={'Nav'}><NavigationBar/></div>
+          <div className={'Main'}>
+              <Routes>
+                  <Route path={'/activity'} element={<ActivityPage/>}/>
+                  <Route path={'*'} element={<ActivityPage/>}/>
+              </Routes>
+          </div>
+          <div className={'Cart'}>
+              <CartBar/>
+          </div>
+      </div>
+
   );
 }
 

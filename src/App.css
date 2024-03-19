@@ -1,5 +1,23 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  gap: 30px;
+  width: 1920px;
+}
+ /* width main - 1170px  whole width - 1920px*/
+.Nav {
+  width: 345px;
+  background-color: gray;
+}
+.Main {
+  display: flex;
+  width: 1170px;
+  background-color: brown;
+}
+.Cart {
+  width: 345px;
+  background-color: gray;
 }
 
 .App-logo {
