@@ -5,10 +5,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /*fonts*/
+  --logo-font: AveriaLibre, sans-serif;
+  --primary-font: Fredoka, sans-serif;
+  /*colors*/
+  --primary-bg: #f2f2f2;
+  /*color for white background and white text in buttons*/
+  --secondary-bg-text: #fff;
+  /*background color for ADD and ORDER buttons*/
+  --primary-orange: #F46D40;
+  /*background color for other buttons*/
+  --secondary-orange: #FF9846;
+  /*typography*/
+  /*color for main text*/
+  --primary-text: #000;
+  /*color for some headers that seem black and black button*/
+  --black-header: #111111;
+  /*color for grey text*/
+  --secondary-text: #A4ACAD;
+  /*color for 'soon' banners*/
+  --soon-banner: #EB5757;
 }
 

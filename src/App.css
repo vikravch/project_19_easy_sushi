@@ -3,7 +3,9 @@
   flex-direction: row;
   min-height: 100vh;
   gap: 30px;
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
 }
  /* width main - 1170px  whole width - 1920px*/
 .Nav {
@@ -12,7 +14,8 @@
 }
 .Main {
   display: flex;
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
   background-color: brown;
 }
 .Cart {
