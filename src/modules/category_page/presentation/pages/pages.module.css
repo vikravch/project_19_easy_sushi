@@ -1,0 +1,11 @@
+.category_container {
+    width: 100%;
+    padding: 30px 110px 170px;
+    background-color: var(--primary-bg);
+}
+@media (max-width: 500px) {
+    .category_container {
+        padding: 15px 15px 0;
+    }
+}
+
