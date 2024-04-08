@@ -1,0 +1,58 @@
+.order_header_container {
+  width: 100%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 500;
+}
+
+.continue_choosing_button {
+  border: none;
+  color: var(--primary-text);
+  font-weight: 500;
+
+  &:hover {
+    cursor: pointer;
+    text-shadow: 0px 5px 3px var(--secondary-text);
+  }
+}
+
+.hours_info_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0px 5px 3px var(--secondary-text);
+
+  .info_desc {
+    color: var(--primary-text);
+  }
+
+  .info_phones {
+    color: var(--secondary-orange);
+  }
+
+  .info_hours {
+    text-align: center;
+    color: var(--secondary-text);
+  }
+}
+
+.language_container {
+  display: flex;
+  gap: 2px;
+}
+
+.language_button {
+  border: none;
+  text-shadow: 0px 5px 3px var(--secondary-text);
+  font-style: italic;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+

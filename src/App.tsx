@@ -8,6 +8,7 @@ import CartBar from "./modules/nav_cart/presentation/CartBar";
 import CategoryPage from "./modules/category_page/presentation/pages/categoryPage";
 import {getLangFromStorage, setLangInStorage} from "./utils/common";
 import i18n from "i18next";
+import OrderPage from "./modules/order_page/presentation/pages/OrderPage";
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
                   <Route path={'/activity'} element={<ActivityPage/>}/>
                   <Route path={'*'} element={<ActivityPage/>}/>
                   <Route path={'/category'} element={<CategoryPage/>}/>
+                  <Route path={'/order'} element={<OrderPage />} />
               </Routes>
           </div>
           <div className={'Cart'}>
