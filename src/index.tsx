@@ -7,6 +7,7 @@ import {BrowserRouter} from "react-router-dom";
 import './fonts/fonts.css';
 import {Provider} from "react-redux";
 import {store} from "./general/redux/store";
+import './i18next'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
