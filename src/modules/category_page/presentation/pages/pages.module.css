@@ -3,6 +3,9 @@
     padding: 30px 110px 170px;
     background-color: var(--primary-bg);
 }
+.hebrew {
+    direction: rtl;
+}
 @media (max-width: 500px) {
     .category_container {
         padding: 15px 15px 0;
