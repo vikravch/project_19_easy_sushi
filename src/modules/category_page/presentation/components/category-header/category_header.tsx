@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import styles from './category_header.module.css';
 import setLogo from "../../mock_data/icons/sets.png";
 import {mockData} from "../../mock_data/mock_data";
