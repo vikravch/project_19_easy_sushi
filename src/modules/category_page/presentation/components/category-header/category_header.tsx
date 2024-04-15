@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import styles from './category_header.module.css';
 import setLogo from "../../mock_data/icons/sets.png";
 import {mockData} from "../../mock_data/mock_data";
@@ -7,47 +7,24 @@ import {useTranslation} from"react-i18next";
 import {languages} from "../../../../../utils/common";
 import {changeCurrentLanguage} from "../../../../../utils/common-redux/languageSlice";
 import {useAppDispatch, useAppSelector} from "../../../../../general/redux/hooks";
+import useCloseByEscape from "../../utils/useCloseByEscape";
+import useCloseOnClickOutside from "../../utils/useCloseOnClickOutside";
 
 const CategoryHeader = () => {
     const dispatch = useAppDispatch();
+
     const {language} = useAppSelector(state => state.language);
 
     const [lang, setLang] = useState(language === 'En' ? 'He' : 'En')
-
     const {t, i18n} = useTranslation();
+
     const [isActive, setIsActive] = useState(false);
+
     const menuRef = useRef<HTMLUListElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
 
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                menuRef.current &&
-                !menuRef.current.contains(event.target as Node) &&
-                menuButtonRef.current &&
-                !menuButtonRef.current.contains(event.target as Node)
-            ) {
-                setIsActive(false);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
-
-    useEffect(() => {
-        const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                setIsActive(false);
-            }
-        };
-        document.addEventListener('keydown', handleKeyDown);
-        return () => {
-            document.removeEventListener('keydown', handleKeyDown);
-        };
-    }, []);
+    useCloseByEscape(setIsActive);
+    useCloseOnClickOutside(isActive, setIsActive, menuRef, menuButtonRef);
 
     const toggleLanguage = (l: string) => {
         l === languages[0] ? setLang(languages[1]) : setLang(languages[0]);
