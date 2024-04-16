@@ -22,9 +22,10 @@ const CategoryHeader = () => {
 
     const menuRef = useRef<HTMLUListElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const arrRefs = [menuRef, menuButtonRef];
 
     useCloseByEscape(setIsActive);
-    useCloseOnClickOutside(isActive, setIsActive, menuRef, menuButtonRef);
+    useCloseOnClickOutside(isActive, setIsActive, arrRefs);
 
     const toggleLanguage = (l: string) => {
         l === languages[0] ? setLang(languages[1]) : setLang(languages[0]);

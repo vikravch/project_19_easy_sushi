@@ -9,17 +9,19 @@
 }
  /* width main - 1170px  whole width - 1920px*/
 .Nav {
-  width: 345px;
+  flex-basis: 345px;
   background-color: gray;
+
 }
 .Main {
   display: flex;
-  max-width: 1170px;
-  width: 100%;
+  /*max-width: 1170px;*/
+  /*width: 100%;*/
+  flex-grow: 1;
   background-color: brown;
 }
 .Cart {
-  width: 345px;
+  flex-basis: 345px;
   background-color: gray;
 }
 

@@ -8,6 +8,8 @@ export const mockData = [
     {
         id: '1',
         name: 'Top Set',
+        hebrew_name: 'קומבינצית טופ',
+        category_hebrew: 'קומבינציות',
         img: topSet,
         category: 'Sets',
         weight: 1020,
@@ -17,6 +19,8 @@ export const mockData = [
     {
         id: '2',
         name: 'Salmon Combo',
+        hebrew_name: 'קומבינצית סלמון',
+        category_hebrew: 'קומבינציות',
         img: salmonSet,
         category: 'Sets',
         weight: 1050,
@@ -26,6 +30,8 @@ export const mockData = [
     {
         id: '3',
         name: 'Top Set',
+        hebrew_name: 'קומבינצית טופ',
+        category_hebrew: 'קומבינציות',
         img: topSet,
         category: 'Sets',
         weight: 1020,
@@ -35,6 +41,8 @@ export const mockData = [
     {
         id: '4',
         name: 'Salmon Combo',
+        hebrew_name: 'קומבינצית סלמון',
+        category_hebrew: 'קומבינציות',
         img: salmonSet,
         category: 'Sets',
         weight: 1050,
@@ -45,6 +53,8 @@ export const mockData = [
     {
         id: '5',
         name: 'Top Set',
+        hebrew_name: 'קומבינצית טופ',
+        category_hebrew: 'קומבינציות',
         img: topSet,
         category: 'Sets',
         weight: 1020,
@@ -55,6 +65,8 @@ export const mockData = [
     {
         id: '6',
         name: 'Salmon Combo',
+        hebrew_name: 'קומבינצית סלמון',
+        category_hebrew: 'קומבינציות',
         img: salmonSet,
         category: 'Sets',
         weight: 1050,
