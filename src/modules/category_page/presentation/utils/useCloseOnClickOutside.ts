@@ -1,28 +1,22 @@
 import {useEffect} from "react";
-
 const useCloseOnClickOutside = (
     isActive: boolean,
     setIsActive: React.Dispatch<React.SetStateAction<boolean>>,
-    menuRef: React.RefObject<HTMLElement>,
-    menuButtonRef: React.RefObject<HTMLElement>
+    refs: React.RefObject<HTMLElement>[]
 ) => {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (
-                isActive &&
-                menuRef.current &&
-                !menuRef.current.contains(event.target as Node) &&
-                menuButtonRef.current &&
-                !menuButtonRef.current.contains(event.target as Node)
-            ) {
+            const isMustBeClosed = refs.every(ref => {
+                return ref.current && !ref.current.contains(event.target as Node);
+            });
+            if (isActive && isMustBeClosed) {
                 setIsActive(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
-
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isActive, setIsActive, menuRef, menuButtonRef]);
+    }, [isActive, refs, setIsActive]);
 }
 export default useCloseOnClickOutside;
