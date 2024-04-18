@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {Route, Routes} from "react-router-dom";
 import ActivityPage from "./modules/activity_page/presentation/ActivityPage";
-import NavigationBar from "./modules/nav_cart/presentation/NavigationBar";
-import CartBar from "./modules/nav_cart/presentation/CartBar";
+import CartBar from "./modules/nav_cart/presentation/cart_bar/CartBar";
+import NavigationBar from "./modules/nav_cart/presentation/navigation_bar/NavigationBar";
 
 function App() {
   return (

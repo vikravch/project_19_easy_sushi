@@ -8,7 +8,7 @@
  /* width main - 1170px  whole width - 1920px*/
 .Nav {
   width: 345px;
-  background-color: gray;
+  background-color: white;
 }
 .Main {
   display: flex;
