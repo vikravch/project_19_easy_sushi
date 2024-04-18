@@ -1,0 +1,56 @@
+/* width main - 1170px  whole width - 1920px*/
+/*sidebar width: 345px;*/
+
+/* Styles for the list */
+.list {
+    /* Your styles for the menu item */
+    padding-left: 140px;
+    list-style: none;
+}
+
+/* Styles for the list item */
+.listItem {
+    /* Your styles for the menu item */
+    /*padding: 20px;*/
+    text-decoration: none;
+    padding: 10px 0 10px 0;
+
+}
+.companyInfo {
+   border-bottom: 2px solid lightgray;
+    padding-bottom: 20px;
+    margin-left: 140px;
+
+}
+.companyLogo {
+   height: 100px;
+    width: 100px;
+}
+
+.companyName{
+    font-size: 32px;
+}
+/* Styles for the icon */
+.icon {
+    padding: 10px 10px;
+}
+
+/* Styles for the link */
+.link {
+    /* Your styles for the link */
+    font-size: 24px;
+    color: #282c34;
+    text-decoration: none;
+    padding: 10px 15px;
+
+}
+
+.link:hover {
+    color: orange;
+}
+
+
+/* Styles for the title */
+.title {
+    /* Your styles for the title */
+}
