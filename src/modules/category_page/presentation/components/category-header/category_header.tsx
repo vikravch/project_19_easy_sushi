@@ -9,6 +9,7 @@ import {changeCurrentLanguage} from "../../../../../utils/common-redux/languageS
 import {useAppDispatch, useAppSelector} from "../../../../../general/redux/hooks";
 import useCloseByEscape from "../../utils/useCloseByEscape";
 import useCloseOnClickOutside from "../../utils/useCloseOnClickOutside";
+import {useLocation, useParams} from "react-router-dom";
 
 const CategoryHeader = () => {
     const dispatch = useAppDispatch();
@@ -23,6 +24,9 @@ const CategoryHeader = () => {
     const menuRef = useRef<HTMLUListElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
     const arrRefs = [menuRef, menuButtonRef];
+
+    const location = useLocation().pathname.split('/').pop();
+    console.log(location)
 
     useCloseByEscape(setIsActive);
     useCloseOnClickOutside(isActive, setIsActive, arrRefs);
