@@ -29,7 +29,7 @@ function App() {
               <Routes>
                   <Route path={'/activity'} element={<ActivityPage/>}/>
                   <Route path={'*'} element={<ActivityPage/>}/>
-                  <Route path={'/category'} element={<CategoryPage/>}/>
+                  <Route path={'/category/*'} element={<CategoryPage/>}/>
                   <Route path={'/order'} element={<OrderPage />} />
               </Routes>
           </div>
