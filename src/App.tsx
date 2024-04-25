@@ -9,6 +9,8 @@ import {getLangFromStorage, setLangInStorage} from "./utils/common";
 import {useAppSelector} from "./general/redux/hooks";
 import i18n from "i18next";
 import OrderPage from "./modules/order_page/presentation/pages/OrderPage";
+import HomePage from './modules/home_page/presentation/HomePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     const currentLanguage = getLangFromStorage();
@@ -28,7 +30,7 @@ function App() {
           <div className={'Main'}>
               <Routes>
                   <Route path={'/activity'} element={<ActivityPage/>}/>
-                  <Route path={'*'} element={<ActivityPage/>}/>
+                  <Route path={'*'} element={<HomePage/>}/>
                   <Route path={'/category'} element={<CategoryPage/>}/>
                   <Route path={'/order'} element={<OrderPage />} />
               </Routes>

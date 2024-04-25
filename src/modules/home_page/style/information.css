@@ -1,0 +1,51 @@
+  .wrapper_information{
+    width: 80%;
+    margin: 0 10%;
+    height: auto;
+    
+  }
+
+  .title{
+    font-size: x-large;
+    font-weight: 700;
+  }
+
+  .textAboutUs{
+    margin: 20px 0;
+    font-size: large;
+  }
+
+  .textList{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+
+    .span1{
+      margin-top: 7px;
+    }
+    .span3{
+      margin-bottom: 7px;
+    }
+  }
+
+.details{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px 0;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  color: rgb(255, 152, 70);
+
+  .buttonDetails{
+    padding: 0 5px;
+  }
+
+  .buttonDetails:hover{
+    color: rgb(255, 165, 61);
+  }
+}
+
+

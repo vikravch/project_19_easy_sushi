@@ -1,0 +1,150 @@
+/*---------------------------ContactSection----------------------------*/
+.contactInform{
+    width: 1170px;
+    height: auto;
+    display: flex;
+    border-bottom: 2px solid rgb(206, 206, 206); 
+    margin: 0 0; 
+  }
+  
+  .phoneNumber{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5px;
+    border-right: 2px solid rgb(206, 206, 206);
+    
+   
+    .telOrd{
+      font-weight: bolder;
+      
+    }
+    .num{
+      color: rgb(255, 152, 70);
+      font-weight: bolder;
+    }
+    .openHours{
+      font-size: 1em;
+      color: rgb(120, 120, 120);
+      font-weight: 600;
+    }
+    
+  }
+  .citySelection{
+    width: 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+    font-size: larger;
+  
+    .dropdown-toggle{
+      font-size: 1em;
+      font-weight: 500;
+      color: rgb(65, 65, 65);
+      
+    }
+    .dropdown-toggle:hover{
+      color: rgb(255, 152, 70);
+    }
+  }
+  .dropdown{
+    width: 160px;
+  }
+
+  .feedBack{
+    width: 100px; 
+    height: 80px; 
+    text-align: center;
+    font-size: 1.1em;
+  
+    .reviews{
+      position: relative;
+      top: 40px;
+    } 
+    a{
+      text-decoration: none;
+      color: rgb(65, 65, 65);
+      font-weight: 500;
+    }
+    .reviews a:hover{
+      color:rgb(255, 152, 70);
+    }
+  }
+  
+  .orders{
+    width: 200px;
+    height: 80px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1em;
+
+    .ord{
+      position: relative;
+      top: 40px;
+    }
+    a{
+      text-decoration: none;
+      color: rgb(65, 65, 65);
+      font-weight: 500;
+    }
+    .ord a:hover{
+      color: rgb(255, 152, 70);
+    }
+  }
+
+  .search{
+    width: 100px;
+    height: 80px;
+  
+    .searchImg{
+      position: relative;
+      left: 30px;
+      top: 35px;
+      width: 40px;
+      height: 40px;
+    }
+  } 
+
+  .mb-3{
+    height: 40px;
+    color: orange;
+    position: relative;
+    left: 80px;
+  }
+  .form-control{
+    border: 1px solid rgb(206, 206, 206);
+    position: relative;
+    top: 30px;
+    left: 20px;
+  }
+  .input-group-text{
+    border: 1px solid rgb(206, 206, 206);
+    position: relative;
+    top: 30px;
+    left: 20px;
+  }
+  .d-flex{
+    width: 300px;
+   
+  }
+  .searchActiveButton{
+    color: black;
+    font-weight: 500;
+    background-color: rgb(255, 152, 70);
+    padding: 0 0;
+    height: 30px;
+    width: 80px;
+  } 
+  .searchActiveButton:hover{
+    background-color: rgb(255, 173, 106);
+  }
+
+  .category_container {
+    width: 100%;
+    padding: 30px calc((100% - 950px) / 2) 170px;
+    background-color: var(--primary-bg);
+}
+
+  /*------------------------------------------------------------------*/
