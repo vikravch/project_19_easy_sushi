@@ -26,13 +26,13 @@
     border-radius: 15px 15px 0 0;
     position: relative;
     max-width: 250px;
-    width: 100%;
 }
 .sort_button {
-    padding: 6px 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 24px;
     border: none;
     background-color: #fff;
-    text-align: left;
     border-radius: 15px 15px 0 0;
     width: 100%;
 }
@@ -54,9 +54,9 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    gap: 35px;
 }
 .arrow {
-    margin-left: 35px;
     display: inline-block;
     width: 8px;
     height: 8px;
@@ -66,11 +66,12 @@
 }
 .dropdown_list {
     list-style-type: none;
-    padding: 6px 14px;
+    padding: 6px 24px;
     width: 100%;
     background-color: #fff;
     box-shadow: 0 15px 10px -15px rgba(0, 0, 0, 0.09);
-    text-align: left;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     z-index: 1;
 }
@@ -100,10 +101,16 @@
     gap: 20px;
 }
 .card_container {
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 288px);
     gap: 31px 42px;
+    justify-content: center;
+}
+@media (max-width: 700px) {
+    .card_container {
+        grid-template-columns: repeat(auto-fill, 210px);
+        gap: 21px 32px;
+    }
 }
 @media (max-width: 500px) {
     .card_container {
@@ -117,6 +124,7 @@
     }
     .choice_container {
         width: 100%;
+        display: block;
     }
     .sorting_menu {
         border-radius: 10px;
@@ -146,10 +154,17 @@
     }
     .sort_button {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         border-radius: 10px;
         padding: 10px 20px 10px;
+    }
+    .active {
+        border-radius: 10px 10px 0 0;
+    }
+    .dropdown_list_item:first-child {
+        border-top: none;
     }
 }
 
