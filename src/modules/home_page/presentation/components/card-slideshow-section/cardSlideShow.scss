@@ -1,0 +1,104 @@
+.buttons{
+  width: 80%;
+  margin: 0 10%;
+  font-size: x-large;
+}
+
+.buttons a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin: 0 10px;
+}
+.buttons a:hover{
+  color: rgb(255, 152, 70);
+}
+
+.wrapper_CardBar{
+  width: 100%;
+  height: auto;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cardSlider{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3vh;
+  flex-wrap: nowrap;
+}
+
+.card1 {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: calc(100%/3);
+  height: auto;  
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  margin: 0 2%;
+  
+}
+
+.card-img-top {
+  height: auto;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 12vw;
+  height: 15vh;
+}
+
+.card-footer {
+ display: flex;
+ flex-direction: row;
+ align-items: center; 
+ gap: 30%;
+ width: 100%;
+ height: 7vh;
+}
+
+.card-footer:last-child{
+  justify-content: right;
+}
+
+.text-muted{
+  font-size: larger;
+  font-weight: 700;
+}
+
+.buttonAdd{
+  background-color: rgb(244, 109, 64) !important;   
+  font-weight: 600 !important;
+  font-size: 1.1em !important;
+  width: 5vw;
+}
+
+.buttonAdd:hover{
+  background-color: rgb(233, 76, 24) !important;
+}
+
+.arrow-Left:hover{
+  opacity: 0.8;
+}
+.arrow-Right:hover{
+  opacity: 0.8;
+}
+
+
+
+
+  /*rgb(244, 109, 64); figma add button*/ 
+  /*rgb(255, 152, 70);* figma orange/
+  /*rgb(255, 136, 0); my*/

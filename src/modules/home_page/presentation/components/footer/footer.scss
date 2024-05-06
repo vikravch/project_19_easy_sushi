@@ -2,21 +2,21 @@
     border-top: 2px solid rgb(206, 206, 206);
     width: 80%;
     height: auto;
-    margin: 30px 10%;
+    margin: 0 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   
     .firstSection{
-      margin: 15px 10px;
-      padding: 15px 15px;
-      width: 30%;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      line-height: 40px;
+      line-height: 4vh;
       font-size: large;
       font-weight: 500;  
+      margin: 1vw 0;
+      padding: 1vw 1vw; 
     }
     .firstSection span a{
       text-decoration: none;
@@ -27,57 +27,52 @@
     }
   
     .secondSection{
-      width: 30%;
-      margin: 15px 10px;
-      padding: 20px 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;    
+      margin: 1vw 0;
+      padding: 1vw 1vw;
       border-left: 2px solid rgb(206, 206, 206);
       
-  
       .enterNumber{
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
         font-size: large;
   
         .span1{
           font-weight: 700;
         }
-        .form-control{
-          position: relative;
-          left: -2px;
-          top: 12px;
-        }
-
-        
+      
       }
       .picOfSocialMedia{
         display: flex;
         justify-content: space-around;
-        margin-top: 20px;
-        position: relative;
-        left: 20px;
+        
       }
       .picOfSocialMedia a img:hover{
         transform: scale(1.1);
       }
     }
-
     .socialMediaSection{
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
       color:rgb(145, 145, 145);
     }
     
-  
     .thirdSection{
-      width: 30%;
-      margin: 15px 10px;
-      padding: 20px 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;     
       border-left: 2px solid rgb(206, 206, 206);
       font-size: large;
+      margin: 1vw 0;
+      padding: 1vw 1vw;
   
       .numbers{
         display: flex;
         flex-direction: column;
-        margin-left: 30px;
         font-weight: 500;
         color:rgb(145, 145, 145);
       }

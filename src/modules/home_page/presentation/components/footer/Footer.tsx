@@ -1,7 +1,7 @@
-import picWhatsApp from '../img/whatsapp.png';
-import picTelegram from '../img/telegram.png';
-import picInstagram from '../img/instagram.png';
-import '../style/footer.css';
+import picWhatsApp from '../../../img/whatsapp.png';
+import picTelegram from '../../../img/telegram.png';
+import picInstagram from '../../../img/instagram.png';
+import '../footer/footer.scss';
 
 import Form from 'react-bootstrap/Form';
 
@@ -26,8 +26,7 @@ function Footer() {
                     </Form.Text>
                 </div>
                 <div className="socialMediaSection">
-                    <span>Choose a convenient</span>
-                    <span>messenger for communication</span>
+                    <span>Choose a convenient messenger for communication</span>
                     <div className="picOfSocialMedia">
                         <a href="/whatsApp"><img src={picWhatsApp} alt="Whats App" /></a>
                         <a href="/telegram"><img src={picTelegram} alt="Telegram" /></a>

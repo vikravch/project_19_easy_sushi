@@ -1,6 +1,6 @@
-import arrowDown from '../img/arrowDown.png';
+import arrowDown from '../../../img/arrowDown.png';
 import { useState } from 'react';
-import '../style/information.css';
+import '../information-section/information_section.scss';
 
 
 function Information() {

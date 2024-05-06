@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import searchIcon from '../img/searchIcon.png';
+import searchIcon from '../../../img/searchIcon.png';
 import { FormControl, InputGroup, Button } from 'react-bootstrap';
-import '../style/contactSection.css';
-import '../../../index.css'
+import '../header/header.scss';
+import '../../../../../index.css';
 
 function ContactSection() {
     const [selectedCity, setSelectedCity] = useState('City');
@@ -25,13 +25,15 @@ function ContactSection() {
     return (     
        <header>
           <div className='contactInform'>
-               <div className='phoneNumber'>
+                <div className='phoneNumber'>
                     <span className='telOrd'>Our phones</span>
                     <span className='num'>+972 705 188 955</span>
                     <span className='num'>+972 705 188 955</span>
                     <span className='openHours'>Business hours: 10:00 - 00:00 </span>
-               </div>
-               <DropdownButton 
+                </div>
+                <div className='generalSection'>
+                <div className='headerLeftSide'>
+                <DropdownButton 
                     id="dropdown-basic-button" 
                     title={selectedCity} 
                     variant="underline"
@@ -40,16 +42,19 @@ function ContactSection() {
                     <Dropdown.Item onClick={() => handleCitySelect('Haifa')}>Haifa</Dropdown.Item>
                     <Dropdown.Item onClick={() => handleCitySelect('Tel-aviv')}>Tel-aviv</Dropdown.Item>
                     <Dropdown.Item onClick={() => handleCitySelect('Petah Tikva')}>Petah Tikva</Dropdown.Item>
-               </DropdownButton>  
-               <div className='feedBack' style={{ marginLeft: showSearchBar ? '0' : '400px' }}>
+                </DropdownButton>  
+               </div>
+                
+                <div className='headerRightSide'>
+               <div className='feedBack'>
                     <span className='reviews'><a href="./">Reviews</a></span>
                </div>
-               <div className="orders" style={{ marginLeft: showSearchBar ? '0' : '20px' }}>
+               <div className="orders">
                     <span className='ord'><a href="./">Delivery and Payment</a></span>
                </div>
                {showSearchBar ? (
-                    <form onSubmit={handleSearchBarClose} className="d-flex">
-                        <InputGroup className="mb-3">
+                    <form onSubmit={handleSearchBarClose} className="d-flex searchInput">
+                        <InputGroup >
                             <FormControl
                                 placeholder="Search..."
                                 aria-label="Search"
@@ -66,10 +71,12 @@ function ContactSection() {
                     </form>
                 ) : (
                     <div className="search" onClick={handleSearchIconClick}>
-                        <img className='searchImg' src={searchIcon} alt="#" />
+                        <img className='searchImg' src={searchIcon} alt="#"/>
                     </div>
                 )}
-          </div>     
+                </div>
+                </div>
+            </div>
        </header>
     )
 }

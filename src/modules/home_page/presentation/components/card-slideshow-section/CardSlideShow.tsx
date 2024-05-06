@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import arrowLeftIcon from '../img/arrowLeft.png';
-import arrowRightIcon from '../img/arrowRight.png';
+import arrowLeftIcon from '../../../img/arrowLeft.png';
+import arrowRightIcon from '../../../img/arrowRight.png';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import '../style/cardSlideShow.css';
+import './cardSlideShow.scss';
 
 function CardSlideShow() {
     const [startIndex, setStartIndex] = useState(0);
 
     const cards = [
         { title: 'Philadelphia and Salmon Set', description: '1050 g, 30 pcs', price: '299 ₪', image: 'philadelphia.png' },
-        { title: 'Top set', description: '1020 g, 40 pcs', price: '319 ₪', image: 'salmonComb.png' },
-        { title: 'Salmon combination', description: '1200 g, 52 pcs', price: '329 ₪', image: 'topSet.png' },
+        { title: 'Top set', description: '1020 g, 40 pcs', price: '319 ₪', image: 'philadelphia.png' },
+        { title: 'Salmon combination', description: '1200 g, 52 pcs', price: '329 ₪', image: 'philadelphia.png' },
         { title: 'Special combination', description: '1300 g, 56 pcs', price: '169 ₪', image: 'philadelphia.png' },
-        { title: 'The biggest Philadelphia', description: '1400 g, 23 pcs', price: '543 ₪', image: 'salmonComb.png' },
-        { title: 'Special combination', description: '1500 g, 12 pcs', price: '234 ₪', image: 'topSet.png' },
+        { title: 'The biggest Philadelphia', description: '1400 g, 23 pcs', price: '543 ₪', image: 'philadelphia.png' },
+        { title: 'Special combination', description: '1500 g, 12 pcs', price: '234 ₪', image: 'philadelphia.png' },
         
     ];
 
@@ -39,33 +39,34 @@ function CardSlideShow() {
                     <Nav.Link href="#">New items</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="./popular">Popular</Nav.Link>
+                    <Nav.Link href="">Popular</Nav.Link>
                 </Nav.Item>
       
             </Nav>         
             <div className="wrapper_CardBar">
                 <div className="cardSlider">
-                    <Button variant="light" className="arrowLeft" onClick={handlePrev}>
+                <Button variant="none" className="arrow-Left" onClick={handlePrev}>
                         <img src={arrowLeftIcon} alt="" />
                     </Button>
                     <CardGroup>
                         {cards.slice(startIndex, startIndex + 3).map((card, index) => (
-                            <div key={index} className={`card ${index === 1 ? 'active' : ''}`}>
-                                <Card border="white" style={{ margin: '10px 15px'}}>
-                                    <Card.Img variant="top" src={require(`../imagesForCarousel/${card.image}`)} />
+                            <div key={index} className={`card1 ${index === 1 ? 'active' : ''}`}>
+                                <Card>
+                                    <Card.Img variant="top" src={require(`../../../imagesForCarousel/${card.image}`)} />
                                     <Card.Body>
                                         <Card.Title>{card.title}</Card.Title>
                                         <Card.Text>{card.description}</Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
                                         <small className="text-muted">{card.price}</small>
-                                        <Button variant="warning" className="buttonAdd">Add</Button>{' '}
+                                        <Button variant="none" className="buttonAdd">Add</Button>{' '}
                                     </Card.Footer>
                                 </Card>
                             </div>
                         ))}
                     </CardGroup>
-                    <Button variant="light" className="arrowRight" onClick={handleNext}>
+                   
+                    <Button variant="none" className="arrow-Right" onClick={handleNext}>
                     <img src={arrowRightIcon} alt="" />
                     </Button>
                 </div>
