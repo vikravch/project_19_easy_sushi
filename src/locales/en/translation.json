@@ -6,5 +6,8 @@
   "lower": "Lower Price",
   "higher": "Higher Price",
   "quantity": "Quantity",
-  "weight": "Weight"
+  "weight": "Weight",
+  "gram": "gram",
+  "pieces": "pieces",
+  "add": "Add"
 }

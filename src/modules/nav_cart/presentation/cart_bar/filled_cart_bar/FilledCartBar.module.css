@@ -1,0 +1,115 @@
+
+.filledCardBar{
+    margin-left: 10px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 50px;
+    background-color: #F2F2F2;
+    border-radius: 3px;
+    font-size: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4px;
+}
+.listItemPicture {
+    width: 70px;
+    height: 47px;
+    display: inline;
+}
+
+.ordersList {
+    background-color: white;
+    width: 290px;
+}
+
+.listItem {
+    list-style: none;
+    display: flex;
+}
+
+.listItemName {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.listItemInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-block: 5px;
+}
+
+.orderItemAmount {
+    font-weight: bolder;
+}
+
+.listItemPrice {
+    margin-left: 30px;
+    font-weight: bolder;
+}
+
+.listItemCurrencySymbol {
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.amountBtn {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #FF9846;
+    color: white;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    margin-inline: 5px;
+
+}
+
+.amountBtn:hover {
+    background-color: #F46D40;
+}
+
+.amountBtn:active {
+    background-color: #EB5757;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 290px;
+    height: 50px;
+    background-color: white;
+    padding-top: 15px;
+
+}
+
+.checkOutBtn{
+    width: 180px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: #F46D40;
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.totalPrice{
+    font-size: 24px;
+    font-weight: bold;
+    margin-inline: 5px;
+}
+
+.totalCurrencySymbol{
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 20px;
+}
