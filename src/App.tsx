@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './App.css';
 import {Route, Routes, useLocation} from "react-router-dom";
 import ActivityPage from "./modules/activity_page/presentation/ActivityPage";
-import CartBar from "./modules/nav_cart/presentation/cart_bar/CartBar";
+import RightSideBar from "./modules/nav_cart/presentation/cart_bar/RightSideBar";
 import NavigationBar from "./modules/nav_cart/presentation/navigation_bar/NavigationBar";
 import CategoryPage from "./modules/category_page/presentation/pages/categoryPage";
 import {getLangFromStorage, setLangInStorage} from "./utils/common";
@@ -34,7 +34,7 @@ function App() {
               </Routes>
           </div>
           <div className={'Cart'}>
-              <CartBar/>
+              <RightSideBar/>
           </div>
       </div>
   );
