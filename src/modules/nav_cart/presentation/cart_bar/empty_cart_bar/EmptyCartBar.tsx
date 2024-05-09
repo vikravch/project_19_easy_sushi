@@ -1,5 +1,4 @@
 import React from 'react';
-import {inspect} from "util";
 import styles from "./EmptyCartBar.module.css"
 
 function EmptyCartBar() {
