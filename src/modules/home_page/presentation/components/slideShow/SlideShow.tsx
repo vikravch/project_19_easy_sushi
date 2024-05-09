@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import '../slideShow/slideshow.scss';
+import './slideshow.scss';
 
 interface SlideShowProps {
   images: string[];

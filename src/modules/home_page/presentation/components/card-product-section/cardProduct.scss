@@ -1,0 +1,133 @@
+// .product-carousel {
+//     display: flex;
+//     align-items: center;
+//     overflow: hidden;
+//     position: relative;
+//     width: 100%;
+  
+//     .slide {
+//       opacity: 0;
+//       transition: opacity 0.5s ease;
+//       display: inherit;
+//     }
+  
+//     .slide.active {
+//       opacity: 1;
+//     }
+  
+//     .prev,
+//     .next {
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       background: none;
+//       border: none;
+//       outline: none;
+//       font-size: 24px;
+//       cursor: pointer;
+//     }
+  
+//     .prev {
+//       left: 10px;
+//     }
+  
+//     .next {
+//       right: 10px;
+//     }
+//   }
+
+
+.product_carousel{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  margin: 5vh 0;
+  width: 100%;
+
+  .arrow{
+    border: none;
+  }
+}
+
+.cards_product{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.card_product{
+  width: 100%;
+  height: 20%;
+  margin: 0 1%;
+
+  .card{ 
+    width: 100%;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    background: white;
+  }
+}
+
+.product_picture{
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+.wrapper_products{
+  display: flex;
+  flex-direction: column;
+}
+.product_details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.nameOfProduct{
+  width: 90%;
+  height: 60px;
+  margin: 0 5%;
+  
+  span{
+    font-size: 1.3em;
+    font-weight: 600;
+   
+  }
+}
+.description{
+  width: 90%;
+  height: auto;
+  margin: 0 5%;
+  margin-top: 5%;
+  border-bottom: 2px solid rgb(206, 206, 206);
+
+}
+
+.footer{
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  span{
+    font-size: 1.3em;
+    font-weight: 600;
+    
+  }
+
+  button{
+    width: 40%;
+    height: 35px;
+    border: none;
+    border-radius: 12px;
+    background: rgb(233, 76, 24);
+    color: white;
+    font-size: 1.2em;
+    font-weight: 650;
+  }
+
+  button:hover{
+    background: rgb(255, 108, 59);
+  }
+}
+
