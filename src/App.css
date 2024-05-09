@@ -14,10 +14,13 @@
 }
 .Main {
   display: flex;
-  /*max-width: 1170px;*/
-  /*width: 100%;*/
+  max-width: 1170px;
+  /* width: 100%; */
   flex-grow: 1;
-  background-color: brown;
+  
+
+ 
+  background-color: rgb(241, 241, 241);
 }
 .Cart {
   flex-basis: 345px;

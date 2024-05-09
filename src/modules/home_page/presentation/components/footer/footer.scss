@@ -1,0 +1,81 @@
+.bottomSections{
+    border-top: 2px solid rgb(206, 206, 206);
+    width: 80%;
+    height: auto;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+    .firstSection{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      line-height: 4vh;
+      font-size: large;
+      font-weight: 500;  
+      margin: 1vw 0;
+      padding: 1vw 1vw; 
+    }
+    .firstSection span a{
+      text-decoration: none;
+      color: black;
+    }
+    .firstSection span a:hover{
+      color: rgb(255, 152, 70);
+    }
+  
+    .secondSection{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;    
+      margin: 1vw 0;
+      padding: 1vw 1vw;
+      border-left: 2px solid rgb(206, 206, 206);
+      
+      .enterNumber{
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+  
+        .span1{
+          font-weight: 700;
+        }
+      
+      }
+      .picOfSocialMedia{
+        display: flex;
+        justify-content: space-around;
+        
+      }
+      .picOfSocialMedia a img:hover{
+        transform: scale(1.1);
+      }
+    }
+    .socialMediaSection{
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      color:rgb(145, 145, 145);
+    }
+    
+    .thirdSection{
+      width: 100%;
+      display: flex;
+      flex-direction: column;     
+      border-left: 2px solid rgb(206, 206, 206);
+      font-size: large;
+      margin: 1vw 0;
+      padding: 1vw 1vw;
+  
+      .numbers{
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        color:rgb(145, 145, 145);
+      }
+    }
+  
+  

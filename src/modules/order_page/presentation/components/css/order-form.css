@@ -1,0 +1,129 @@
+.order_form_container {
+  width: 100%;
+  height: 90%;
+  padding: 30px 200px 70px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-family: var(--primary-font);
+}
+.order_form_container button {
+  border: none;
+  width: 50%;
+  height: 40px;
+  background-color: #fff;
+}
+.order_form_container button:hover {
+  cursor: pointer;
+}
+.order_form_container button[type=submit] {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: var(--primary-orange);
+}
+.order_form_container p {
+  text-align: center;
+  font-weight: 400;
+}
+
+.form_layout {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: 360px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.form_layout input {
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  height: 40px;
+}
+.form_layout button {
+  border: none;
+  width: 50%;
+  height: 40px;
+  background-color: #fff;
+}
+.form_layout button:hover {
+  cursor: pointer;
+}
+.form_layout .form_left_button {
+  border-radius: 5px 0 0 5px;
+}
+.form_layout .form_right_button {
+  border-radius: 0 5px 5px 0;
+}
+
+.form_left_side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+.form_left_side .left_side_1 {
+  display: flex;
+  gap: 20px;
+}
+.form_left_side .left_side_1 input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50%;
+  height: 40px;
+}
+.form_left_side .left_side_3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.form_left_side .left_side_3 input[type=number] {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 48%;
+  height: 40px;
+}
+.form_left_side .left_side_4 {
+  display: flex;
+  justify-content: space-between;
+}
+.form_left_side .left_side_4 button {
+  display: flex;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background-color: var(--primary-orange);
+}
+.form_left_side .promo_code {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+}
+
+.form_right_side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form_right_side .right_side_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form_right_side .right_side_2 input {
+  width: 20%;
+}
+.form_right_side .right_side_2 .street {
+  width: 70%;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=order-form.css.map */

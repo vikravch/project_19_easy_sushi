@@ -1,0 +1,90 @@
+/*---------------------------ContactSection----------------------------*/
+.contactInform{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid rgb(206, 206, 206); 
+    margin: 0 0; 
+    gap: 1vw;
+  }
+  
+  .phoneNumber{  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid rgb(206, 206, 206);
+    padding: 1% 1%;
+    
+    .telOrd{
+      font-weight: bolder;
+      
+    }
+    .num{
+      color: rgb(255, 152, 70);
+      font-weight: bolder;
+    }
+    .openHours{
+      font-size: 1em;
+      color: rgb(120, 120, 120);
+      font-weight: 600;
+    }
+  }
+
+  .generalSection{
+    display: flex;    
+    gap: 14vw;
+  }
+
+.headerLeftSide{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  
+  .btn{
+    font-size: 1.1em;
+    font-weight: 500;
+    
+  }
+  .btn:hover{
+    color: rgb(255, 152, 70);
+  }
+}
+
+.headerRightSide{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2vw;
+
+  .feedBack{
+    font-size: 1.1em;
+    font-weight: 500;
+    
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color:rgb(255, 152, 70);
+    }
+  } 
+
+  .orders{
+    font-size: 1.1em;
+    font-weight: 500;
+    width: 12vw;
+    
+    a{
+      text-decoration: none;
+      color: black;    
+    }
+    a:hover{
+      color:rgb(255, 152, 70);
+    }
+  } 
+}

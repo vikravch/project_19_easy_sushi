@@ -1,0 +1,118 @@
+// slideShow.scss
+.slideShow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .slideShow {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+  
+    .slide {
+      width: 100%;  
+      display: none; 
+      &.active {
+        display: block;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      z-index: 100;
+    }
+  
+    .prev {
+      left: 0;
+    }
+  
+    .next {
+      right: 0;
+    }
+  }
+  
+
+
+
+
+
+
+// .carousel{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: 2vh 0;
+// }
+
+// .imagesForCarousel{
+//     width: 80%;
+//     height: 10vh;
+//     border: 1px solid black;
+//     border-radius: 10px;
+// }
+
+// .arrow{
+//     font-size: xx-large;
+// }
+
+
+
+.slide-show {
+  position: relative;
+  max-width: 600px; // Можно задать нужную ширину
+  margin: auto;
+  overflow: hidden;
+  height: 100px;
+
+  .slide-show-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+  }
+}
