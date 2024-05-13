@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
 import arrowRight from '../card-product-section/card-img/arrowRight.png';
 import arrowLeft from '../card-product-section/card-img/arrowLeft.png';
 import pic1 from '../card-product-section/card-img/philadelphia.png';
 import '../card-product-section/cardProduct.scss';
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
+// import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 interface Product {
   id: number;
@@ -62,6 +62,7 @@ const ProductCarousel: React.FC = () => {
   ]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeLink, setActiveLink] = useState<string>('new');
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -75,9 +76,18 @@ const ProductCarousel: React.FC = () => {
     );
   };
 
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link);
+  };
+
   return (
-    <div>
-      
+    <div className="wrap_carousel">
+    <div className="nav-item">  
+      <div className="item">
+      <div className={`link ${activeLink === 'new' ? 'active' : ''}`} onClick={() => handleLinkClick('new')}><a href="#">New items</a></div>
+          <div className={`link ${activeLink === 'popular' ? 'active' : ''}`} onClick={() => handleLinkClick('popular')}><a href="#">Popular</a></div>
+      </div> 
+    </div>
     <div className="product_carousel">
         <button onClick={prevSlide} className='arrow'><img src={arrowLeft} alt="&lt;" /></button>
       <div className="cards_product">

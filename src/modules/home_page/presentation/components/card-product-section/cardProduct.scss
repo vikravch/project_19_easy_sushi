@@ -1,47 +1,15 @@
-// .product-carousel {
-//     display: flex;
-//     align-items: center;
-//     overflow: hidden;
-//     position: relative;
-//     width: 100%;
+.wrap_carousel{
+  width: 100%;
   
-//     .slide {
-//       opacity: 0;
-//       transition: opacity 0.5s ease;
-//       display: inherit;
-//     }
-  
-//     .slide.active {
-//       opacity: 1;
-//     }
-  
-//     .prev,
-//     .next {
-//       position: absolute;
-//       top: 50%;
-//       transform: translateY(-50%);
-//       background: none;
-//       border: none;
-//       outline: none;
-//       font-size: 24px;
-//       cursor: pointer;
-//     }
-  
-//     .prev {
-//       left: 10px;
-//     }
-  
-//     .next {
-//       right: 10px;
-//     }
-//   }
-
+}
 
 .product_carousel{
   display: flex;
   justify-content: space-around;
   align-items:center;
-  margin: 5vh 0;
+  margin: 2vh 0 4vh 0;
+  // margin-top: 2vh;
+  // margin-bottom: 5vh;
   width: 100%;
 
   .arrow{
@@ -131,3 +99,33 @@
   }
 }
 
+.nav-item{
+  width: 80%;
+  margin: 0 11%;
+  display: flex;
+}
+.item{
+  width: 100%;
+  display: flex;
+  gap: 3%;
+
+  .link{
+      font-size: x-large;
+      
+      a{
+          text-decoration: none;
+          color: black;
+          font-weight: 600;
+      }
+      a:hover{
+          color: rgb(255, 152, 70);
+      }
+  }
+} 
+
+.active{
+  text-decoration: underline;
+}
+.active:hover{
+  color: rgb(255, 152, 70);
+}
