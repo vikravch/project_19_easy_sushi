@@ -38,7 +38,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
     width: 15%;
   }
   
@@ -46,6 +45,8 @@
     border: none;
     padding: 10px;
     cursor: pointer; 
+    font-size: 1.1em;
+    font-weight: 500;
   }
   .dropdownButton:hover{
     color: rgb(255, 152, 70);
@@ -53,6 +54,7 @@
   
   .arrowDown {
     margin-left: 5px; 
+    
   }
   
   .dropdownMenu {
@@ -79,8 +81,6 @@
     background-color: #f8f9fa;
   }
 
-
-
 .headerRightSide{
   display: flex;
   align-items: center;
@@ -88,8 +88,6 @@
   width: 55%;
   gap: 5%;
   
-  
-
   .feedBack{
     font-size: 1.1em;
     font-weight: 500;
@@ -117,25 +115,28 @@
   } 
 }
 
-
 .d-flex{
-
   height: 40px;
   width: 40%;
 }
-
 .searchInput{
   border: 2px solid rgb(80, 80, 80);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-right: none;
+  padding-left: 5px;
+  width: 65%;
 }
 .searchActiveButton{
-  border:  2px solid rgb(80, 80, 80);
+  border:  2px solid rgb(255, 152, 70);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: rgb(255, 152, 70);
-  width: 100%;
+  width: 35%;
   padding: 0 5%;
-  font-weight: 500;  
+  font-weight: 600;  
+  font-size: 1.1em;
+}
+.searchActiveButton:hover{
+  background: rgb(255, 129, 27);
+  border:  2px solid rgb(255, 129, 27);
 }

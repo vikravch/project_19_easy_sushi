@@ -10,7 +10,7 @@ import {useAppSelector} from "./general/redux/hooks";
 import i18n from "i18next";
 import OrderPage from "./modules/order_page/presentation/pages/OrderPage";
 import HomePage from './modules/home_page/presentation/components/home-page-section/HomePage';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
     const currentLanguage = getLangFromStorage();
