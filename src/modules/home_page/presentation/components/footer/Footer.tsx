@@ -1,9 +1,9 @@
+import React from 'react';
+import './footer.scss'; 
+
 import picWhatsApp from '../../../img/whatsapp.png';
 import picTelegram from '../../../img/telegram.png';
 import picInstagram from '../../../img/instagram.png';
-import '../footer/footer.scss';
-
-import Form from 'react-bootstrap/Form';
 
 function Footer() {
     return (
@@ -16,14 +16,15 @@ function Footer() {
             </div>
             <div className="secondSection">
                 <div className="enterNumber">
-                    <Form.Label htmlFor="inputPassword5" className="span1" >Enter the number</Form.Label>
-                        <Form.Control
-                            type="password"
-                            id="inputPassword5"
-                            aria-describedby="passwordHelpBlock"
-                        />
-                    <Form.Text id="passwordHelpBlock" muted>
-                    </Form.Text>
+                    <label htmlFor="inputPassword5" className="span1">Enter the number</label>
+                    <input
+                        type="password"
+                        id="inputPassword5"
+                        aria-describedby="passwordHelpBlock"
+                        className="puttNumber"
+                    />
+                    <small id="passwordHelpBlock" className="form-text text-muted">
+                    </small>
                 </div>
                 <div className="socialMediaSection">
                     <span>Choose a convenient messenger for communication</span>
@@ -41,11 +42,8 @@ function Footer() {
                     <span>Address: Levi St 84</span>
                 </div>
             </div>
-
         </div>
-    )
-
+    );
 }
 
 export default Footer;
-

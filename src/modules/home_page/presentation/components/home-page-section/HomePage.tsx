@@ -5,14 +5,14 @@ import Information from '../information-section/Information_section';
 import Footer from '../footer/Footer';
 import SlideShow from '../slideShow/SlideShow';
 import CardProduct from '../card-product-section/CardProduct';
-import ButtonLink from '../buttonLink-section/ButtonLink';
+
 import '../home-page-section/homePage.scss';
 
 const HomePage = () => {
     const imageUrls = [
-      '../slideshow-section/images/firstSlide.jpg',
-      '../slideshow-section/images/secondSlide.jpg',
-      '../slideshow-section/images/thirdSlide.jpg',
+      '../slideshow-section/imagesForCarousel/firstSlide.jpg',
+      '../slideshow-section/imagesForCarousel/secondSlide.jpg',
+      '../slideshow-section/imagesForCarousel/thirdSlide.jpg',
     ];
   
     return (
@@ -20,7 +20,6 @@ const HomePage = () => {
         <ContactSection/>
         <SlideShow images={imageUrls}/>
         <MenuPic/>
-        <ButtonLink/>
         <CardProduct/>
         <Information/>
         <Footer/>
