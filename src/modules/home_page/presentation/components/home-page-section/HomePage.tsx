@@ -10,9 +10,9 @@ import '../home-page-section/homePage.scss';
 
 const HomePage = () => {
     const imageUrls = [
-      '../slideshow-section/imagesForCarousel/firstSlide.jpg',
-      '../slideshow-section/imagesForCarousel/secondSlide.jpg',
-      '../slideshow-section/imagesForCarousel/thirdSlide.jpg',
+      require('./../slideShow/imagesForCarousel/firstSlide.jpg'),
+      require('./../slideShow/imagesForCarousel/secondSlide.jpg'),
+      require('./../slideShow/imagesForCarousel/thirdSlide.jpg'),
     ];
   
     return (

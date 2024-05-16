@@ -39,7 +39,7 @@ const SlideShow: React.FC<SlideShowProps> = ({ images }) => {
       <div className="slideShow">
         {images.map((image, index) => (
           <div key={index} className="slide" style={{ display: index === 0 ? 'block' : 'none' }}>
-            <img src={process.env.PUBLIC_URL + image} alt={`Slide ${index}`} />
+            <img src={image} alt={`Slide ${index}`} />
           </div>
         ))}
         <button className="prev" onClick={prevSlide}>
