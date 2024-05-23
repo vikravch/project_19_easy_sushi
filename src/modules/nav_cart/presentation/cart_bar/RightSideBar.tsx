@@ -1,36 +1,20 @@
-import React, {useCallback, useEffect, useState} from 'react';
 import EmptyCartBar from "./empty_cart_bar/EmptyCartBar";
 import FilledCartBar from "./filled_cart_bar/FilledCartBar";
 import DeliveryTimeChecker from "./delivery_time_checker/DeliveryTimeChecker";
 import DeliveryTimeResult from "./delivery_time_result/DeliveryTimeResult";
 import styles from "./RightSideBar.module.css"
-import {Order} from "../../entity/cart_bar/Order";
-import {OrdersRepository} from "../../data/cart_bar/OrdersRepository";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchOrdersAsync} from "./redux/ordersAsyncThunk";
+import {useEffect} from "react";
 
 
 function RightSideBar() {
-
-    const [orders, setOrders] = useState<Order[]>([]);
+    const dispatch: any = useDispatch();
+    const orders = useSelector((state: any) => state.order.items);
 
     useEffect(() => {
-        const fetchOrders = async () => {
-            try {
-                const ordersData = await OrdersRepository.getOrdersList();
-                setOrders(ordersData);
-            } catch (error) {
-                console.error("Error fetching orders:", error);
-            }
-        };
-
-        fetchOrders();
-    }, []);
-
-    const updateOrders = useCallback(async ()=>{
-        // request for random activity
-        const res = await OrdersRepository.getOrdersList();
-        setOrders(res);
-    }, []);
-
+        dispatch(fetchOrdersAsync());
+    }, [dispatch]);
 
     return (
         <div className={styles.rightSideBar} >
