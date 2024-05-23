@@ -70,7 +70,7 @@
     width: 18px;
     height: 18px;
     margin-inline: 5px;
-
+    cursor: pointer;
 }
 
 .amountBtn:hover {
@@ -89,6 +89,7 @@
     height: 50px;
     background-color: white;
     padding-top: 15px;
+    padding-bottom: 15px;
 
 }
 
@@ -100,16 +101,17 @@
     color: white;
     border: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .totalPrice{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     margin-inline: 5px;
 }
 
 .totalCurrencySymbol{
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
     margin-right: 20px;
 }
