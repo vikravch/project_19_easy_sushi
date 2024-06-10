@@ -1,10 +1,18 @@
 import './order-header.scss';
 import clock from '../../icons/clock.png';
+import {useNavigate} from "react-router-dom";
 
 const OrderHeader = () => {
+
+    const navigation = useNavigate();
+
+    const handleClick = () => {
+        navigation("/categories");
+    }
+
     return (
        <div className={'order_header_container'}>
-            <button className={'continue_choosing_button'}>&larr; Continue choosing</button>
+            <button className={'continue_choosing_button'} onClick={handleClick}>&larr; Continue choosing</button>
             <div className={'hours_info_container'}>
                 <span className={'info_desc'}>Our phones</span>
                 <span className={'info_phones'}>+972 705 188 955</span>

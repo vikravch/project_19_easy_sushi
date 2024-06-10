@@ -74,7 +74,7 @@ function FilledCartBar() {
             <div className={styles.footer}>
                 <span className={styles.totalPrice}>{orderSum.toFixed(2)}</span>
                 <span className={styles.totalCurrencySymbol}>&#x20AA;</span>
-                <Link to={"/categories/cart"} className={styles.link}>
+                <Link to={"/order"} className={styles.link}>
                     <button className={styles.checkOutBtn} onClick={() => dispatch(updateOrdersAsync(orders))}>Checkout</button>
                 </Link>
             </div>

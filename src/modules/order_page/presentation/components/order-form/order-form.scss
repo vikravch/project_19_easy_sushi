@@ -1,7 +1,7 @@
 .order_form_container {
   width: 100%;
   height: 90%;
-  padding: 30px 200px 70px;
+  padding: 30px 25% 70px;
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -42,7 +42,6 @@
 .form_layout {
   margin-top: 20px;
   width: 100%;
-  max-width: 800px;
   height: 360px;
   display: flex;
   flex-direction: row;
@@ -55,24 +54,37 @@
     padding: 5px;
     height: 40px;
   }
+
+  .form_error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    p {
+      color: #EB5757;
+      font-size: 14px;
+    }
+  }
+
+  .error {
+    p {
+      color: red;
+    }
+  }
 }
 
 .form_left_side {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 50%;
 
   .left_side_1 {
     display: flex;
     gap: 20px;
 
     input {
-      border: none;
-      border-radius: 5px;
-      padding: 5px;
-      width: 50%;
-      height: 40px;
+      width: 100%;
     }
   }
 
@@ -86,7 +98,7 @@
       border: none;
       border-radius: 5px;
       padding: 5px;
-      width: 48%;
+      width: 99%;
       height: 40px;
     }
   }
@@ -128,13 +140,14 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    .street {
+      width: 70%;
+    }
+
     input {
       width: 20%;
     }
 
-    .street {
-      width: 70%;
-    }
   }
 
   .right_side_3 {
@@ -147,4 +160,6 @@
       width: 20%;
     }
   }
+
+
 }

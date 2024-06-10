@@ -1,6 +1,6 @@
 import {Order} from "../../../entity/cart_bar/Order";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {fetchOrdersAsync, updateOrdersAsync} from "./ordersAsyncThunk";
+import {fetchOrdersAsync, FetchOrdersType, updateOrdersAsync} from "./ordersAsyncThunk";
 
 const initialState = {
     items: [] as Order[],
@@ -74,9 +74,10 @@ const orderSlice = createSlice({
             .addCase(fetchOrdersAsync.pending, state => {
                 state.status = 'loading';
             })
-            .addCase(fetchOrdersAsync.fulfilled, (state, action: PayloadAction<Order[]>) => {
+            .addCase(fetchOrdersAsync.fulfilled, (state, action: PayloadAction<FetchOrdersType>) => {
                 state.status = 'succeeded';
-                state.items = action.payload;
+                state.items = action.payload.list;
+                state.orderSum = action.payload.sum;
             })
             .addCase(fetchOrdersAsync.rejected, state => {
                 state.status = 'failed'
