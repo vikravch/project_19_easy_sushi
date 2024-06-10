@@ -26,19 +26,28 @@ function App() {
     }, [pathname]);
   return (
       <div className={'App'}>
-          <div className={'Nav'}><NavigationBar/></div>
-          <div className={'Main'}>
-              <Routes>
-                  <Route path={'/activity'} element={<ActivityPage/>}/>
-                  <Route path={'*'} element={<HomePage/>}/>
-                  <Route path={'/category/*'} element={<CategoryPage/>}/>
-                  <Route path={'/order'} element={<OrderPage/>} />
-              </Routes>
-          </div>
-          <div className={'Cart'}>
-              <RightSideBar/>
-          </div>
+          {pathname === "/order" ?
+              <>
+                  <Routes>
+                      <Route path={'/order'} element={<OrderPage/>}/>
+                  </Routes>
+              </>
+               :
+              <>
+                  <div className={'Nav'}><NavigationBar/></div>
+                  <div className={'Main'}>
+                      <Routes>
+                          <Route path={'/activity'} element={<ActivityPage/>}/>
+                          <Route path={'*'} element={<HomePage/>}/>
+                          <Route path={'/category/*'} element={<CategoryPage/>}/>
+                      </Routes>
+                  </div>
+                  <div className={'Cart'}><RightSideBar/></div>
+              </>
+
+          }
       </div>
   );
 }
+
 export default App;

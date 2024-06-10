@@ -1,0 +1,39 @@
+.description_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 80px 0;
+  }
+
+  hr {
+    background-color: var(--primary-bg);
+    width: 80%;
+    opacity: 0.25;
+  }
+
+  .discount {
+
+    :last-child {
+      font-weight: 500;
+    }
+  }
+
+  .delivery {
+    font-weight: 500;
+  }
+
+  .total {
+    color: var(--secondary-orange);
+    font-weight: 700;
+
+    :first-child {
+      font-size: 20px;
+    }
+  }
+}

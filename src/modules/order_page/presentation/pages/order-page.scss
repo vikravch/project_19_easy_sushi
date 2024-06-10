@@ -1,4 +1,17 @@
 .pages_order_container {
+  display: flex;
   width: 100%;
   background-color: var(--primary-bg);
+  font-family: var(--primary-font);
+}
+
+.pages_order_form {
+  max-width: 1575px;
+  flex: 2;
+}
+
+.pages_order_cart {
+  background-color: white;
+  flex: 1;
+  max-width: 345px;
 }

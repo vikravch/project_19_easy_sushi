@@ -2,7 +2,12 @@ import {createAsyncThunk} from "@reduxjs/toolkit";
 import {Order} from "../../../entity/cart_bar/Order";
 import {OrdersRepository} from "../../../data/cart_bar/OrdersRepository";
 
-export const fetchOrdersAsync = createAsyncThunk<Order[]>(
+export type FetchOrdersType = {
+    list: Order[],
+    sum: number
+}
+
+export const fetchOrdersAsync = createAsyncThunk<FetchOrdersType>(
     'order/fetchOrders',
     async () => {
         const data = await OrdersRepository.fetchOrders();
@@ -17,8 +22,11 @@ export const fetchOrdersAsync = createAsyncThunk<Order[]>(
                 i.menuItemAmount,
                 i.menuItemPrice);
             ordersList.push(order);
-        })
-        return ordersList;
+        });
+        const sum = ordersList.reduce((sum : number, item : any) => {
+            return sum + (parseFloat(item.menuItemPrice) * parseFloat(item.menuItemAmount));
+        }, 0);
+        return {list: ordersList, sum: sum};
     }
 );
 
