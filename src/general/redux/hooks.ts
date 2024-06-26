@@ -12,6 +12,7 @@ export const createAppAsyncThunk = createAsyncThunk.withTypes<{
     dispatch: AppDispatch
 
 }>();
+
 export const useOnPageLoad = (handler: () => void) => {
     useEffect(() => {
         const handlePageLoad = (event: any) => {
@@ -33,7 +34,7 @@ export const useOnPageUnload = (handler: () => void) => {
         const handleBeforeUnload = (event: any) => {
             handler();
             event.preventDefault();
-            event.returnValue = ''; // Chrome requires returnValue to be set
+            event.returnValue = '';
         };
 
         window.addEventListener('beforeunload', handleBeforeUnload);

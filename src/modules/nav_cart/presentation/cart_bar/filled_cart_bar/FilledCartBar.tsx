@@ -1,7 +1,6 @@
 import styles from "./FilledCartBar.module.css";
 import {Link} from "react-router-dom";
 import {Order} from "../../../entity/cart_bar/Order";
-import {useDispatch, useSelector} from "react-redux";
 import {
     computeOrderSum,
     decrementOrderItemAmount,
@@ -12,14 +11,13 @@ import {
     fetchOrdersAsync,
     updateOrdersAsync
 } from "../redux/ordersAsyncThunk";
-import {useOnPageLoad, useOnPageUnload} from "../../../../../general/redux/hooks";
-import {useEffect} from "react";
+import {useAppDispatch, useAppSelector, useOnPageLoad, useOnPageUnload} from "../../../../../general/redux/hooks";
 
 function FilledCartBar() {
 
-    const dispatch: any = useDispatch();
-    const orders = useSelector((state: any) => state.order.items);
-    const orderSum = useSelector((state: any) => state.order.orderSum);
+    const dispatch: any = useAppDispatch();
+    const orders = useAppSelector((state) => state.order.items);
+    const orderSum = useAppSelector((state) => state.order.orderSum);
 
 
     const handleIncrement = (menuItemId: string) => {
@@ -39,9 +37,8 @@ function FilledCartBar() {
     // load data on page load
     useOnPageLoad(() => {
         dispatch(fetchOrdersAsync());
-        dispatch(computeOrderSum(orders));
+        dispatch(computeOrderSum());
     });
-
 
 
     useOnPageUnload(() => {
@@ -74,7 +71,7 @@ function FilledCartBar() {
             <div className={styles.footer}>
                 <span className={styles.totalPrice}>{orderSum.toFixed(2)}</span>
                 <span className={styles.totalCurrencySymbol}>&#x20AA;</span>
-                <Link to={"/order"} className={styles.link}>
+                <Link to={"/categories/cart"} className={styles.link}>
                     <button className={styles.checkOutBtn} onClick={() => dispatch(updateOrdersAsync(orders))}>Checkout</button>
                 </Link>
             </div>
